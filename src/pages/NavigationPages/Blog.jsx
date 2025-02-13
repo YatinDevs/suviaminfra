@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Pagination } from "antd";
 import { useNavigate } from "react-router-dom";
-
+import { Pipe1, Pipe2, Pipe3 } from "../../../public/index";
 const blogData = [
   {
     id: "https://hub.countymaterials.com/news/16-reasons-to-choose-reinforced-concrete-pipes-for-storm-water-management",
@@ -11,7 +11,7 @@ const blogData = [
     author: "Admin",
     content:
       "RCC pipes are transforming water management by providing durability, strength, and cost-effectiveness for large-scale projects.",
-    imageUrl: "/public/assets/pipes/img1.png",
+    imageUrl: Pipe1,
   },
   {
     id: "https://www.investindia.gov.in/team-india-blogs/infrastructure-development-india",
@@ -21,7 +21,7 @@ const blogData = [
     author: "Admin",
     content:
       "With rapid urbanization, India's infrastructure sector is evolving with smart cities, sustainable construction, and modern RCC technologies.",
-    imageUrl: "/public/assets/pipes/img2.png",
+    imageUrl: Pipe2,
   },
   {
     id: "https://hub.countymaterials.com/news/16-reasons-to-choose-reinforced-concrete-pipes-for-storm-water-management",
@@ -31,7 +31,7 @@ const blogData = [
     author: "Admin",
     content:
       "Selecting high-quality RCC pipes ensures long-term performance, safety, and compliance with industry standards.",
-    imageUrl: "/public/assets/pipes/img3.png",
+    imageUrl: Pipe3,
   },
 ];
 

@@ -1,34 +1,41 @@
 import React from "react";
-
+import {
+  Pipe1,
+  Pipe2,
+  Pipe3,
+  Pipe4,
+  Pipe5,
+  Pipe6,
+} from "../../../public/index";
 const PipeGallery = () => {
   const images = [
     {
-      src: "/public/assets/pipes/img1.png",
+      src: Pipe1,
       alt: "Installation Process",
       description: "Installation of RCC Pipes at Site",
     },
     {
-      src: "/public/assets/pipes/img2.png",
+      src: Pipe2,
       alt: "Canal Sectioning",
       description: "Precision Canal Sectioning with RCC Pipes",
     },
     {
-      src: "/public/assets/pipes/img3.png",
+      src: Pipe3,
       alt: "Quality Check",
       description: "Rigorous Quality Checks on Pipes",
     },
     {
-      src: "/public/assets/pipes/img4.png",
+      src: Pipe4,
       alt: "Pipe Storage",
       description: "Storage and Handling of RCC Pipes",
     },
     {
-      src: "/public/assets/pipes/img5.png",
+      src: Pipe5,
       alt: "Pipe Manufacturing",
       description: "High-Quality RCC Pipe Manufacturing Process",
     },
     {
-      src: "/public/assets/pipes/img6.png",
+      src: Pipe6,
       alt: "Pipe Transportation",
       description: "Safe and Efficient Transportation of Pipes",
     },
