@@ -16,9 +16,9 @@ import VisionaryLeaders from "../../components/Aboutus/VisionaryLeaders";
 
 // Sample images for the slider
 const sliderImages = [
-  "public/assets/pipes/img1.png",
-  "public/assets/pipes/img2.png",
-  "public/assets/pipes/img3.png",
+  "/public/assets/pipes/img1.png",
+  "/public/assets/pipes/img2.png",
+  "/public/assets/pipes/img3.png",
 ];
 
 const AboutUs = {
@@ -142,7 +142,7 @@ function About() {
               <SwiperSlide key={index} className="flex justify-center">
                 <img
                   src={src}
-                  alt={`slide-${index}`}
+                  alt={`slide-${src}`}
                   className="rounded-xl shadow-lg h-full object-cover"
                 />
               </SwiperSlide>
