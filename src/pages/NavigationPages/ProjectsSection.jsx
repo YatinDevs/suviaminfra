@@ -1,27 +1,27 @@
 import React from "react";
 import { Card } from "antd";
 import { FaWater, FaHardHat, FaRoad } from "react-icons/fa";
-
+import { Pipe1, Pipe2, Pipe3 } from "../../../public/index";
 const projects = [
   {
     title: "Irrigation Canal Construction in Nashik",
     description:
       "Successfully installed 3.014 km RCC pipelines to improve water distribution.",
-    image: "https://source.unsplash.com/500x300/?construction,pipe",
+    image: Pipe1,
     icon: <FaWater />,
   },
   {
     title: "RCC Pipeline Installation for Water Management",
     description:
       "Implemented high-efficiency water supply networks for industrial clients.",
-    image: "https://source.unsplash.com/500x300/?water,pipeline",
+    image: Pipe2,
     icon: <FaHardHat />,
   },
   {
     title: "Government Collaboration for Rural Infrastructure",
     description:
       "Partnering with state authorities to develop sustainable drainage systems.",
-    image: "https://source.unsplash.com/500x300/?infrastructure,drainage",
+    image: Pipe3,
     icon: <FaRoad />,
   },
 ];
@@ -47,12 +47,7 @@ const ProjectsSection = () => {
                 className="w-full h-48 object-cover"
               />
             </div>
-            <div className=" inset-0 bg-[#f4f4f4] p-4 rounded-xl flex justify-center items-center">
-              {/* Icon */}
-              <div className="text-white text-3xl border border-white rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-white hover:text-[#FFC107] w-16 h-16">
-                {project.icon}
-              </div>{" "}
-            </div>
+
             {/* Content Section */}
             <div className="p-6">
               <h3 className="text-lg font-semibold text-gray-900">
@@ -61,9 +56,12 @@ const ProjectsSection = () => {
               <p className="text-gray-600 mt-2">{project.description}</p>
 
               {/* Custom High-Contrast Gradient Button */}
-              <button className="mt-4 w-full py-2 rounded-lg text-gray-900 font-semibold bg-gradient-to-r from-blue-500 via-300 to-blue-200 transition-all duration-300 hover:shadow-lg hover:opacity-90">
-                Read More
-              </button>
+              <div className="mt-4 flex gap-5 justify-center items-center text-white w-full py-2 rounded-lg  font-semibold bg-gradient-to-r from-blue-500 via-300 to-blue-200 transition-all duration-300 hover:shadow-lg hover:opacity-90">
+                <div>Read More</div>
+                <div className="text-white text-2xl   rounded-full flex justify-center items-center  cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-white hover:text-[#FFC107] w-10 h-10">
+                  {project.icon}
+                </div>{" "}
+              </div>
             </div>
           </Card>
         ))}

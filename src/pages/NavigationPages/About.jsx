@@ -11,15 +11,11 @@ import { SiRenovate } from "react-icons/si";
 import { FaPersonDigging } from "react-icons/fa6";
 import { AiOutlinePicture } from "react-icons/ai";
 import { Crown, Lightbulb, Globe, Users } from "lucide-react";
-
+import { Pipe1, Pipe2, Pipe3 } from "../../../public/index";
 import VisionaryLeaders from "../../components/Aboutus/VisionaryLeaders";
 
 // Sample images for the slider
-const sliderImages = [
-  "/public/assets/pipes/img1.png",
-  "/public/assets/pipes/img2.png",
-  "/public/assets/pipes/img3.png",
-];
+const sliderImages = [Pipe1, Pipe2, Pipe3];
 
 const AboutUs = {
   title: "Suviam",

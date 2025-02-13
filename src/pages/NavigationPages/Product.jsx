@@ -1,27 +1,27 @@
 import React from "react";
 import { Carousel } from "antd";
-
+import { Pipe6 } from "../../../public/index";
 const products = [
   {
     title: "Plain And Socket Type RCC Pipes",
     description:
       "Suitable for various cross drainage and sewerage applications.",
-    imageUrl: "public/assets/pipes/img6.png",
+    imageUrl: Pipe6,
   },
   {
     title: "Reinforced RCC Pipes Various Classes",
     description: "Designed for high-pressure applications and heavy loads.",
-    imageUrl: "public/assets/pipes/img6.png",
+    imageUrl: Pipe6,
   },
   {
     title: "Specialized Articles",
     description: `Custom-designed solutions for unique project requirements including Box Culverts, Ready to Install Manhole Chambers, U-Shape drains, etc.`,
-    imageUrl: "public/assets/pipes/img6.png",
+    imageUrl: Pipe6,
   },
   {
     title: "U-Shape Drains",
     description: "Top-tier product with premium features.",
-    imageUrl: "public/assets/pipes/img6.png",
+    imageUrl: Pipe6,
   },
 ];
 
