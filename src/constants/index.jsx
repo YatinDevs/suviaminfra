@@ -11,12 +11,12 @@ import { RiUserCommunityFill } from "react-icons/ri";
 import { MdOutlineSettingsSuggest } from "react-icons/md";
 import { MdOutlineHighQuality } from "react-icons/md";
 
-import user1 from "../assets/profile-pictures/user1.jpg";
-import user2 from "../assets/profile-pictures/user2.jpg";
-import user3 from "../assets/profile-pictures/user3.jpg";
-import user4 from "../assets/profile-pictures/user4.jpg";
-import user5 from "../assets/profile-pictures/user5.jpg";
-import user6 from "../assets/profile-pictures/user6.jpg";
+import user1 from "../../public/assets/profile-pictures/user1.jpg";
+import user2 from "../../public/assets/profile-pictures/user2.jpg";
+import user3 from "../../public/assets/profile-pictures/user3.jpg";
+import user4 from "../../public/assets/profile-pictures/user4.jpg";
+import user5 from "../../public/assets/profile-pictures/user5.jpg";
+import user6 from "../../public/assets/profile-pictures/user6.jpg";
 
 export const navItems = [
   { label: "Home", href: "#" },

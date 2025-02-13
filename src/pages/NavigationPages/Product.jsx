@@ -6,22 +6,22 @@ const products = [
     title: "Plain And Socket Type RCC Pipes",
     description:
       "Suitable for various cross drainage and sewerage applications.",
-    imageUrl: "src/assets/pipes/img6.png",
+    imageUrl: "public/assets/pipes/img6.png",
   },
   {
     title: "Reinforced RCC Pipes Various Classes",
     description: "Designed for high-pressure applications and heavy loads.",
-    imageUrl: "src/assets/pipes/img6.png",
+    imageUrl: "public/assets/pipes/img6.png",
   },
   {
     title: "Specialized Articles",
     description: `Custom-designed solutions for unique project requirements including Box Culverts, Ready to Install Manhole Chambers, U-Shape drains, etc.`,
-    imageUrl: "src/assets/pipes/img6.png",
+    imageUrl: "public/assets/pipes/img6.png",
   },
   {
     title: "U-Shape Drains",
     description: "Top-tier product with premium features.",
-    imageUrl: "src/assets/pipes/img6.png",
+    imageUrl: "public/assets/pipes/img6.png",
   },
 ];
 

@@ -16,10 +16,11 @@ import VisionaryLeaders from "../../components/Aboutus/VisionaryLeaders";
 
 // Sample images for the slider
 const sliderImages = [
-  "src/assets/pipes/img1.png",
-  "src/assets/pipes/img2.png",
-  "src/assets/pipes/img3.png",
+  "public/assets/pipes/img1.png",
+  "public/assets/pipes/img2.png",
+  "public/assets/pipes/img3.png",
 ];
+
 const AboutUs = {
   title: "Suviam",
   description: "Learn more about our company.",

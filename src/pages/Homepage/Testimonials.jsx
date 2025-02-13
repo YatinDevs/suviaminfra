@@ -18,8 +18,8 @@ const Testimonials = () => {
       </p>
 
       <div className="mt-24 flex flex-1 justify-evenly items-center gap-14 max-lg:flex-col ">
-        {reviews.map((review) => (
-          <ReviewCard key={review.customerName} {...review} />
+        {reviews.map((review, index) => (
+          <ReviewCard key={index} {...review} />
         ))}
       </div>
     </section>

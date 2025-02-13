@@ -1,5 +1,5 @@
 import React from "react";
-import video3 from "../../assets/video3.mp4"; // Ensure correct path
+import video3 from "../../../public/assets/video3.mp4"; // Ensure correct path
 
 function VideoSection() {
   return (

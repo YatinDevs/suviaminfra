@@ -3,32 +3,32 @@ import React from "react";
 const PipeGallery = () => {
   const images = [
     {
-      src: "src/assets/pipes/img1.png",
+      src: "public/assets/pipes/img1.png",
       alt: "Installation Process",
       description: "Installation of RCC Pipes at Site",
     },
     {
-      src: "src/assets/pipes/img2.png",
+      src: "public/assets/pipes/img2.png",
       alt: "Canal Sectioning",
       description: "Precision Canal Sectioning with RCC Pipes",
     },
     {
-      src: "src/assets/pipes/img3.png",
+      src: "public/assets/pipes/img3.png",
       alt: "Quality Check",
       description: "Rigorous Quality Checks on Pipes",
     },
     {
-      src: "src/assets/pipes/img4.png",
+      src: "public/assets/pipes/img4.png",
       alt: "Pipe Storage",
       description: "Storage and Handling of RCC Pipes",
     },
     {
-      src: "src/assets/pipes/img5.png",
+      src: "public/assets/pipes/img5.png",
       alt: "Pipe Manufacturing",
       description: "High-Quality RCC Pipe Manufacturing Process",
     },
     {
-      src: "src/assets/pipes/img6.png",
+      src: "public/assets/pipes/img6.png",
       alt: "Pipe Transportation",
       description: "Safe and Efficient Transportation of Pipes",
     },

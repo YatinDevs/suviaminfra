@@ -1,14 +1,11 @@
 import React from "react";
-import { Outlet, useLocation, useSearchParams } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import Navbar from "../pages/Homepage/Navbar";
 import Footer from "../pages/Homepage/Footer";
 import Whatsapppop from "../components/Popup/Whatsapppop";
 
 function Layout() {
-  const location = useLocation();
-  const [searchParams] = useSearchParams();
-
   return (
     <>
       <Navbar />

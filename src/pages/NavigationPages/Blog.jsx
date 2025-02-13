@@ -11,7 +11,7 @@ const blogData = [
     author: "Admin",
     content:
       "RCC pipes are transforming water management by providing durability, strength, and cost-effectiveness for large-scale projects.",
-    imageUrl: "src/assets/pipes/img1.png",
+    imageUrl: "public/assets/pipes/img1.png",
   },
   {
     id: "https://www.investindia.gov.in/team-india-blogs/infrastructure-development-india",
@@ -21,7 +21,7 @@ const blogData = [
     author: "Admin",
     content:
       "With rapid urbanization, India's infrastructure sector is evolving with smart cities, sustainable construction, and modern RCC technologies.",
-    imageUrl: "src/assets/pipes/img2.png",
+    imageUrl: "public/assets/pipes/img2.png",
   },
   {
     id: "https://hub.countymaterials.com/news/16-reasons-to-choose-reinforced-concrete-pipes-for-storm-water-management",
@@ -31,7 +31,7 @@ const blogData = [
     author: "Admin",
     content:
       "Selecting high-quality RCC pipes ensures long-term performance, safety, and compliance with industry standards.",
-    imageUrl: "src/assets/pipes/img3.png",
+    imageUrl: "public/assets/pipes/img3.png",
   },
 ];
 
