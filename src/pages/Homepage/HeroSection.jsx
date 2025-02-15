@@ -20,22 +20,22 @@ const HeroSection = () => {
     <div className="relative mt-20 w-full h-[500px] md:h-[700px] flex items-center justify-center text-white">
       {/* Background Image with Blur */}
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-98 blur-md"
+        className="absolute inset-0 w-full h-full bg-cover bg-center  "
         style={{ backgroundImage: `url(${background})` }}
       ></div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/100"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-10 via-blue-50 to-blue-400"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-wide">
+      <div className="relative mt-30 z-10 text-center max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl sm:text-6xl text-gray-800 lg:text-7xl font-bold tracking-wide">
           SUVIAM INFRA{" "}
           <span className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
             PRIVATE LIMITED
           </span>
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-neutral-300">
+        <p className="mt-6 text-lg md:text-xl text-gray-700">
           Welcome to Suviam, a leading name in construction and manufacturing.
           We specialize in delivering innovative solutions for irrigation
           projects and producing high-quality RCC pipes and cement articles.
@@ -46,7 +46,7 @@ const HeroSection = () => {
           <a
             href="/assets/Suviam_Infra_Company_Profile.pdf"
             download="Suviam_Profile.pdf"
-            className="bg-gradient-to-r from-blue-400 to-blue-600 py-3 px-6 rounded-lg text-white font-semibold shadow-lg hover:opacity-90 transition duration-300"
+            className="bg-gradient-to-r from-blue-600 to-blue-800 py-3 px-6 rounded-lg text-white font-semibold shadow-lg hover:opacity-90 transition duration-300"
           >
             DOWNLOAD PROFILE
           </a>

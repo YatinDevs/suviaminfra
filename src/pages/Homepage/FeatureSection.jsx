@@ -72,7 +72,7 @@ const FeatureSection = () => {
     <div className="relative my-20 min-h-[700px] text-gray-700">
       <ContentWrapper>
         <div className="text-center">
-          <h3 className="font-palanquin text-center text-4xl font-bold">
+          <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
               Suviam Infra ?
@@ -89,10 +89,10 @@ const FeatureSection = () => {
                 <div className="text-[#00afe9] text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
                   {feature.icon}
                 </div>
-                <h5 className="mt-3 mb-2 text-lg font-semibold">
+                <h5 className="mt-3 mb-2 text-md md:text-lg font-semibold">
                   {feature.text}
                 </h5>
-                <p className="text-sm text-neutral-600 px-4">
+                <p className="text-md md:text-lg text-neutral-600 px-4">
                   {feature.description}
                 </p>
               </div>
