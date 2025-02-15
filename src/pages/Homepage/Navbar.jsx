@@ -58,7 +58,7 @@ const Navbar = () => {
           className={`fixed top-0 left-0 w-full bg-gradient-to-r from-white via-blue-100 to-blue-200 text-blue-900 text-md shadow-md px-4 md:px-10 py-3 flex justify-between items-center transition-all duration-500 z-40 `}
         >
           <div
-            className="flex items-center space-x-4 cursor-pointer "
+            className="flex items-center space-x-4 cursor-pointer max-w-[1440px]"
             onClick={() => navigate(`/`)}
           >
             <div className="bg-blue-900 p-2 rounded-full">
