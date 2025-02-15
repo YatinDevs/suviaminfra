@@ -12,7 +12,6 @@ import {
   gallery4,
 } from "../../../public/index";
 import ContentWrapper from "../../components/ContentWrapper/ContentWrapper";
-import Img from "../../components/lazyLoadImage/Img";
 import {
   FaTools,
   FaBuilding,
@@ -20,6 +19,7 @@ import {
   FaHammer,
   FaCogs,
 } from "react-icons/fa";
+import Img from "../../components/LazyLoadImage/Img";
 
 const PipeGallery = () => {
   const infrastructureImages = [
