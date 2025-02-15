@@ -7,6 +7,7 @@ import {
   MailOutlined,
   EnvironmentOutlined,
 } from "@ant-design/icons";
+import { motion } from "framer-motion";
 
 const { TextArea } = Input;
 
@@ -33,15 +34,30 @@ const Contact = () => {
   const navbarData = { caEmailid: "demo@gmail.com" };
 
   return (
-    <div className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-400 mt-30">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-400 mt-30"
+    >
       <div className="p-4 md:p-8 w-full">
-        <h1 className="text-3xl text-blue-600 font-bold text-center mb-6">
+        <motion.h1
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl text-blue-600 font-bold text-center mb-6"
+        >
           Contact Us
-        </h1>
+        </motion.h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
           {/* Location and Contact Details */}
           <div className="flex flex-col w-full">
-            <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full flex flex-col lg:flex-row justify-center items-center gap-6"
+            >
               <div className="w-full">
                 <iframe
                   title="Google Map"
@@ -55,20 +71,36 @@ const Contact = () => {
               {/* Dynamic Contact Details */}
               <div className="grid gap-4 w-full">
                 {contactDetails.map((detail, index) => (
-                  <Card key={index} className="shadow-md flex items-center p-4">
-                    {detail.icon}
-                    <span>{detail.info}</span>
-                  </Card>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                  >
+                    <Card className="shadow-md flex items-center p-4">
+                      {detail.icon}
+                      <span>{detail.info}</span>
+                    </Card>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
             <br />
 
-            <div className="w-full bg-blue-400 flex flex-col gap-3 justify-center items-start text-xs md:flex-row md:justify-around md:items-center p-2 py-4 rounded-2xl text-transparent bg-clip-text">
-              <div className="flex space-x-4 ">
-                <div className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
+            {/* Call Us & Leave a Message */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full bg-blue-400 flex flex-col gap-3 justify-center items-start text-xs md:flex-row md:justify-around md:items-center p-2 py-4 rounded-2xl text-transparent bg-clip-text"
+            >
+              <div className="flex space-x-4">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
+                >
                   <IoCallOutline />
-                </div>
+                </motion.div>
                 <div>
                   <p className="text-[#274584] text-md md:text-lg">
                     Call Us On
@@ -77,9 +109,12 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex space-x-4">
-                <div className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
+                >
                   <TfiEmail />
-                </div>
+                </motion.div>
                 <div>
                   <p className="text-[#274584] text-md md:text-lg">
                     Leave a message
@@ -87,11 +122,16 @@ const Contact = () => {
                   <p className="text-gray-700">{navbarData?.caEmailid}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Contact Form */}
-          <div className="w-full">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-full"
+          >
             <Card className="shadow-md">
               <Form onFinish={onFinish} layout="vertical">
                 <Form.Item
@@ -101,9 +141,9 @@ const Contact = () => {
                     { required: true, message: "Please enter your name!" },
                   ]}
                 >
-                  <Input placeholder="Enter your name" />
+                  {" "}
+                  <Input placeholder="Enter your name" />{" "}
                 </Form.Item>
-
                 <Form.Item
                   name="email"
                   label="Email"
@@ -115,9 +155,9 @@ const Contact = () => {
                     },
                   ]}
                 >
-                  <Input placeholder="Enter your email" />
+                  {" "}
+                  <Input placeholder="Enter your email" />{" "}
                 </Form.Item>
-
                 <Form.Item
                   name="message"
                   label="Message"
@@ -125,9 +165,12 @@ const Contact = () => {
                     { required: true, message: "Please enter your message!" },
                   ]}
                 >
-                  <TextArea rows={4} placeholder="Write your message here..." />
+                  {" "}
+                  <TextArea
+                    rows={4}
+                    placeholder="Write your message here..."
+                  />{" "}
                 </Form.Item>
-
                 <div className="flex justify-between">
                   <Button type="primary" htmlType="submit">
                     Submit
@@ -138,10 +181,10 @@ const Contact = () => {
                 </div>
               </Form>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

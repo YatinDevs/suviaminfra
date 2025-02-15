@@ -11,39 +11,19 @@ import { FaRegBuilding } from "react-icons/fa";
 import { SiRenovate } from "react-icons/si";
 import { FaPersonDigging } from "react-icons/fa6";
 import { AiOutlinePicture } from "react-icons/ai";
-import { Pipe1, Pipe2, Pipe3 } from "../../../public/index";
+import {
+  Pipe1,
+  Pipe2,
+  Pipe3,
+  Pipe4,
+  Pipe5,
+  Pipe6,
+} from "../../../public/index";
 import VisionaryLeaders from "../../components/Aboutus/VisionaryLeaders";
 import ContentWrapper from "../../components/ContentWrapper/ContentWrapper";
 
 // Sample images for the slider
-const sliderImages = [Pipe1, Pipe2, Pipe3];
-
-const AboutUs = {
-  title: "Suviam",
-  description: "Learn more about our company.",
-  companyInfo: {
-    title: "About Us",
-    description_para1:
-      "SUVIAM INFRA PRIVATE LIMITED is a leading construction company specializing in irrigation projects that enhance water management through canals and dams.",
-    description_para2:
-      "Established in 2023, we have built a strong reputation for delivering innovative and sustainable solutions tailored to meet the unique needs of our clients (Water Resource Department, Govt. of Maharashtra).",
-  },
-  productRange: {
-    title: "Product Range",
-    description: "We offer a comprehensive range of RCC pipes, including:",
-    products: [
-      {
-        title: "Plain And Socket Type RCC Pipes",
-        description:
-          "Suitable for various cross drainage and sewerage applications.",
-      },
-      {
-        title: "Reinforced RCC Pipes (NP3 & NP4 Class)",
-        description: "Designed for high-pressure applications and heavy loads.",
-      },
-    ],
-  },
-};
+const sliderImages = [Pipe1, Pipe2, Pipe3, Pipe4, Pipe5, Pipe6];
 
 const expertise = [
   {
@@ -89,28 +69,34 @@ function About() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mt-30 flex flex-col lg:flex-col justify-center items-center p-8 rounded-2xl"
+        className="mt-35 flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 rounded-2xl"
       >
         <ContentWrapper>
-          <div className="max-w-[1440px] flex flex-col lg:flex-row justify-center items-center">
+          <div className="max-w-[1440px] flex flex-col lg:flex-row justify-center items-center gap-10">
             {/* Image Slider */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="flex-1  p-2 flex justify-center items-center"
+              className="w-full md:w-1/2 flex justify-center"
             >
               <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={3}
+                slidesPerView={"auto"}
                 loop={true}
                 autoplay={{
-                  delay: 2000,
+                  delay: 2500,
                   disableOnInteraction: false,
                 }}
                 speed={1000}
+                breakpoints={{
+                  320: { slidesPerView: 1 },
+                  480: { slidesPerView: 1.2 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
+                }}
                 coverflowEffect={{
                   rotate: 0,
                   stretch: 0,
@@ -120,14 +106,14 @@ function About() {
                 }}
                 pagination={{ clickable: true }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="w-[360px] md:w-full h-[300px] md:h-[500px]"
+                className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
               >
                 {sliderImages.map((src, index) => (
                   <SwiperSlide key={index} className="flex justify-center">
                     <img
                       src={src}
                       alt={`slide-${index}`}
-                      className="rounded-xl shadow-lg h-full object-cover "
+                      className="rounded-xl shadow-lg h-full object-cover"
                     />
                   </SwiperSlide>
                 ))}
@@ -139,30 +125,38 @@ function About() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex-1 w-full"
+              className="w-full "
             >
-              <h1 className="text-3xl text-blue-600 font-bold text-center mb-6">
+              <h1 className="text-2xl sm:text-3xl text-blue-600 font-bold text-center md:text-left mb-4">
                 About Us
               </h1>
-              <p className="text-md mt-2 p-2 text-gray-700">
-                {AboutUs?.companyInfo?.description_para1}
+              <p className="text-sm sm:text-md p-2 text-gray-700">
+                SUVIAM INFRA PRIVATE LIMITED is a leading construction company
+                specializing in irrigation projects that enhance water
+                management through canals and dams.
               </p>
-              <p className="text-md p-2 text-gray-700">
-                {AboutUs?.companyInfo?.description_para2}
+              <p className="text-sm sm:text-md p-2 text-gray-700">
+                Established in 2023, we have built a strong reputation for
+                delivering innovative and sustainable solutions tailored to meet
+                the unique needs of our clients (Water Resource Department,
+                Govt. of Maharashtra).
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
                 {iconData.map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="shadow-md py-8 p-4 rounded-lg flex items-center"
+                    className="shadow-md py-6 px-4 rounded-lg flex items-center bg-white"
                   >
-                    <div className="text-[#00afe9] text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 mr-4 transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
+                    <div className="text-[#00afe9] text-2xl sm:text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-3 sm:p-4 mr-3 transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
                       {item.icon}
                     </div>
-                    <div className="text-md text-gray-700">{item.text}</div>
+                    <div className="text-sm sm:text-md text-gray-700">
+                      {item.text}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -176,15 +170,17 @@ function About() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mt-20 text-center"
+        className="mt-14 text-center px-4 mb-20"
       >
-        <h2 className="text-4xl font-bold text-blue-600">Our Expertise</h2>
-        <p className="text-lg max-w-3xl mx-auto mt-3 text-gray-700">
+        <h2 className="text-2xl sm:text-4xl font-bold text-blue-600">
+          Our Expertise
+        </h2>
+        <p className="text-md sm:text-lg max-w-3xl mx-auto mt-3 text-gray-700">
           Our commitment to quality and sustainability ensures top-tier
           solutions.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8">
           {expertise.map((item, index) => (
             <motion.div
               key={index}
@@ -193,8 +189,10 @@ function About() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="bg-white text-blue-700 p-6 rounded-xl shadow-lg"
             >
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="text-gray-600 mt-2">{item.description}</p>
+              <h3 className="text-md sm:text-xl font-semibold">{item.title}</h3>
+              <p className="text-sm sm:text-md text-gray-600 mt-2">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
