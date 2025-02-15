@@ -80,8 +80,9 @@ const Navbar = () => {
             {[
               "ABOUT US",
               "PRODUCT",
-              "PROJECTS",
               "GALLERY",
+              "PROJECTS",
+
               "BLOG",
               "CONTACT US",
             ].map((item, index) => (
@@ -113,8 +114,8 @@ const Navbar = () => {
           {[
             "ABOUT US",
             "PRODUCT",
-            "PROJECTS",
             "GALLERY",
+            "PROJECTS",
             "BLOG",
             "CONTACT US",
           ].map((item, index) => (
