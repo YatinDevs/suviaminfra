@@ -70,7 +70,7 @@ const Accordion = () => {
       <div className="max-w-6xl mx-auto px-4">
         <h3 className="font-palanquin text-center text-white text-xl md:text-4xl font-bold p-6">
           Frequently
-          <span className="mr-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+          <span className="m-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
             Asked
           </span>
           Questions
