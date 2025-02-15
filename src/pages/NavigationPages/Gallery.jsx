@@ -125,9 +125,9 @@ const PipeGallery = () => {
                     visible: { opacity: 1, scale: 1 },
                   }}
                   transition={{ duration: 0.6 }}
-                  className="w-48 h-48 flex justify-center items-center overflow-hidden rounded-lg shadow-lg"
+                  className="w-40 md:w-48 h-36 md:h-48 flex justify-center items-center overflow-hidden rounded-lg shadow-lg my-2 "
                 >
-                  <Img src={image} className="rounded-lg shadow-lg" />
+                  <Img src={image} className="rounded-lg shadow-lg " />
                 </motion.div>
               ))}
             </motion.div>
