@@ -188,23 +188,23 @@ export const communityLinks = [
 export const reviews = [
   {
     imgURL: user1,
-    customerName: "Morich Brown",
+    customerName: "Government Project Engineer",
+    rating: 4.5,
+    feedback:
+      "Suviam Infra has been a reliable partner in our irrigation projects. Their RCC pipes are of exceptional quality, and their team ensures timely project execution.",
+  },
+  {
+    imgURL: user1,
+    customerName: "Infrastructure Developer",
     rating: 4.5,
     feedback:
       "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
   },
   {
     imgURL: user1,
-    customerName: "Morich Brown",
+    customerName: "Project Engineer",
     rating: 4.5,
     feedback:
-      "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
-  },
-  {
-    imgURL: user1,
-    customerName: "Lota Mongeskar",
-    rating: 4.5,
-    feedback:
-      "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
+      "As a private contractor, I trust Suviam Infra for all my infrastructure needs. Their commitment to quality and sustainability is unmatched.",
   },
 ];

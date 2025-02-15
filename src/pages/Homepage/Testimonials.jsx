@@ -1,5 +1,10 @@
 import ReviewCard from "../../components/ReviewCard/ReviewCard";
 import { reviews } from "../../constants/index";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Testimonials = () => {
   return (
@@ -15,17 +20,22 @@ const Testimonials = () => {
         Hear genuine stories from our satisfied customers about their
         exceptional experiences with us.
       </p>
-
-      <div className="flex mt-16 justify-center items-center flex-wrap gap-10">
+      <Swiper
+        autoplay={{ delay: 3000 }}
+        pagination={{ clickable: true }}
+        modules={[Autoplay, Pagination]}
+        className="w-full  max-w-lg mx-auto mb-12 mt-6"
+      >
         {reviews.map((review, index) => (
-          <div
+          <SwiperSlide
             key={index}
-            className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded-lg p-4"
+            className="p-6 bg-gray-100 rounded-lg text-center"
           >
             <ReviewCard {...review} />
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+      <div className="flex mt-16 justify-center items-center flex-wrap gap-10"></div>
     </section>
   );
 };

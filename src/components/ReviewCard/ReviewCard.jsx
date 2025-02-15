@@ -2,12 +2,12 @@ import { star } from "../../../public/assets/icons";
 
 const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
   return (
-    <div className="flex flex-col justify-center items-center  ">
-      <img
+    <div className="flex flex-col justify-center items-center m-10  ">
+      {/* <img
         src={imgURL}
         alt={customerName}
         className=" w-[80px] h-[80px] md:w-[120px] md:h-[120px] rounded-full object-cover  "
-      />
+      /> */}
       <h3 className="mt-4 font-palanquin text-xl md:text-2xl text-center font-bold ">
         {customerName}
       </h3>

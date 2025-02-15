@@ -8,6 +8,7 @@ import Whatsapppop from "../../components/Popup/Whatsapppop";
 import Accordion from "./Accordian";
 import VideoSection from "./VideoSection";
 import CoreServices from "./CoreServices";
+import Counter from "../NavigationPages/Counter";
 
 function Homepage() {
   return (
@@ -21,8 +22,9 @@ function Homepage() {
       <VideoSection />
       <FeatureSection />
       <CoreServices />
-      <Accordion />
+      <Counter />
       <Testimonials />
+      <Accordion />
       {/* <Footer /> */}
     </div>
   );
