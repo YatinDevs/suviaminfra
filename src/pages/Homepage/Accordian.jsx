@@ -1,11 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { Collapse } from "antd";
-import { InfoCircleOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import ContentWrapper from "../../components/ContentWrapper/ContentWrapper";
-
-const { Panel } = Collapse;
 
 const faqData = [
   {
@@ -40,24 +35,30 @@ const faqData = [
   },
 ];
 
-const AccordianItem = ({ faq }) => {
+const AccordionItem = ({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700 w-full text-xs md:text-lg">
+    <div className=" border-gray-700 w-full text-xs md:text-lg overflow-hidden">
       <button
-        className="w-full flex cursor-pointer justify-between items-center text-left p-4 bg-gray-600 text-white font-medium hover:bg-gray-800 transition duration-300"
+        className="w-full flex justify-between items-center text-left p-4 bg-gray-600 text-white font-medium hover:bg-gray-800 transition-all duration-300 ease-in-out"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{faq.question}</span>
-        <span>{isOpen ? <FaAngleUp /> : <FaAngleDown />}</span>
+        <span
+          className={`transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          {isOpen ? <FaAngleUp /> : <FaAngleDown />}
+        </span>
       </button>
       <div
-        className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-          isOpen ? "max-h-96" : "max-h-0"
+        className={`grid transition-all duration-500 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="p-4 text-[#fff]">{faq.answer}</div>
+        <div className="p-1 text-white overflow-hidden">{faq.answer}</div>
       </div>
     </div>
   );
@@ -65,25 +66,18 @@ const AccordianItem = ({ faq }) => {
 
 const Accordion = () => {
   return (
-    <section
-      className=" py-10 bg-gradient-to-r from-gray-400 via-gray-400 to-gray-700
-"
-    >
+    <section className="py-10 bg-gradient-to-r from-gray-400 via-gray-400 to-gray-700">
       <div className="max-w-6xl mx-auto px-4">
-        <h3
-          className="font-palanquin text-center text-[#fff] text-xl 
-         md:text-4xl font-bold p-6"
-        >
-          Frequently{" "}
+        <h3 className="font-palanquin text-center text-white text-xl md:text-4xl font-bold p-6">
+          Frequently
           <span className="mr-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
-            {" "}
-            Asked{" "}
-          </span>{" "}
+            Asked
+          </span>
           Questions
         </h3>
-        <div className="space-y-6">
+        <div className="space-y-4">
           {faqData.map((faq, index) => (
-            <AccordianItem key={index} faq={faq} />
+            <AccordionItem key={index} faq={faq} />
           ))}
         </div>
       </div>

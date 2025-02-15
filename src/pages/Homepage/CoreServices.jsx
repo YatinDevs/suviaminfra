@@ -22,8 +22,8 @@ const coreServices = [
 const CoreServices = () => {
   return (
     <ContentWrapper>
-      <div className="mt-20 text-gray-700">
-        <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold ">
+      <div className="mt-20 text-gray-700 transition-opacity duration-700 ease-in-out opacity-100 hover:opacity-90">
+        <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
           Our
           <span className="m-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
             Core
@@ -32,9 +32,12 @@ const CoreServices = () => {
         </h3>
         <div className="flex flex-col">
           {coreServices.map((service, index) => (
-            <div key={index} className="w-full  p-4">
+            <div
+              key={index}
+              className="w-full p-4 transform transition-transform duration-300 hover:scale-105"
+            >
               <div className="p-6 shadow-md border-neutral-700 rounded-xl text-center">
-                <CheckCircle2 className="text-orange-500 w-10 h-10 mx-auto mb-4" />
+                <CheckCircle2 className="text-orange-500 w-10 h-10 mx-auto mb-4 transition-transform duration-300 hover:rotate-6" />
                 <h3 className="text-lg md:text-2xl font-semibold mb-4">
                   {service.title}
                 </h3>

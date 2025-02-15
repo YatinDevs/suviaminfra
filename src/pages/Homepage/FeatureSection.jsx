@@ -9,6 +9,7 @@ import {
 import { FaRegHandshake, FaTruckMoving } from "react-icons/fa";
 import { RiBuilding2Line } from "react-icons/ri";
 import ContentWrapper from "../../components/ContentWrapper/ContentWrapper";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -73,22 +74,36 @@ const FeatureSection = () => {
       <ContentWrapper>
         <div className="text-center">
           <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
-            Why Choose{" "}
-            <span className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+            Why Choose
+            <span className="bg-gradient-to-r m-2 from-blue-500 to-blue-800 text-transparent bg-clip-text">
               Suviam Infra ?
             </span>
           </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 mx-5 gap-6 mt-10 lg:mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="grid grid-cols-1 md:grid-cols-3 mx-5 gap-6 mt-10 lg:mt-16"
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="w-full shadow-md px-6 rounded-2xl py-6 active:scale-95"
+              className="w-full shadow-md px-6 rounded-2xl py-6 active:scale-95 bg-white overflow-hidden"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 30px rgba(0, 175, 233, 0.3)",
+              }}
+              transition={{ duration: 0.3 }}
             >
               <div className="flex flex-col justify-center items-center text-center">
-                <div className="text-[#00afe9] text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
+                <motion.div
+                  className="text-[#00afe9] text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
+                  whileHover={{ rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   {feature.icon}
-                </div>
+                </motion.div>
                 <h5 className="mt-3 mb-2 text-md md:text-lg font-semibold">
                   {feature.text}
                 </h5>
@@ -96,9 +111,9 @@ const FeatureSection = () => {
                   {feature.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </ContentWrapper>
     </div>
   );
