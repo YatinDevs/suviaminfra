@@ -21,7 +21,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative mt-20 w-full h-[500px] md:h-[700px] flex items-center justify-center text-white overflow-hidden">
+    <div className="relative shadow-2xl mt-20 w-full h-[500px] md:h-[700px] flex items-center justify-center text-white overflow-hidden">
       {/* Background Image with Transition */}
       <motion.div
         key={background}
@@ -33,7 +33,7 @@ const HeroSection = () => {
       ></motion.div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-10 via-blue-50 to-blue-400"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-10 via-blue-50 to-blue-900 shadow-2xl"></div>
 
       {/* Content with Motion */}
       <motion.div
@@ -44,7 +44,7 @@ const HeroSection = () => {
       >
         <h1 className="text-4xl sm:text-6xl text-gray-800 lg:text-7xl font-bold tracking-wide">
           SUVIAM INFRA{" "}
-          <span className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r m-2 from-blue-600 to-blue-900 text-transparent bg-clip-text">
             PRIVATE LIMITED
           </span>
         </h1>

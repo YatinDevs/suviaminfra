@@ -25,7 +25,7 @@ const CoreServices = () => {
       <div className="mt-20 text-gray-700 transition-opacity duration-700 ease-in-out opacity-100 hover:opacity-90">
         <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
           Our
-          <span className="m-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r m-2 from-blue-600 to-blue-900 text-transparent bg-clip-text">
             Core
           </span>
           Services

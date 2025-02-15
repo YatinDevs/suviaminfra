@@ -125,46 +125,46 @@ function About() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full "
+              className="w-full flex flex-col gap-5 "
             >
-              <h1 className="text-2xl sm:text-3xl text-blue-600 font-bold text-center md:text-left mb-4">
+              <h2 className="text-2xl text-center sm:text-4xl font-bold text-blue-800">
                 About Us
-              </h1>
-              <p className="text-sm sm:text-md p-2 text-gray-700">
+              </h2>
+              <p className="text-sm sm:text-lg p-2 text-gray-700">
                 SUVIAM INFRA PRIVATE LIMITED is a leading construction company
                 specializing in irrigation projects that enhance water
                 management through canals and dams.
               </p>
-              <p className="text-sm sm:text-md p-2 text-gray-700">
+              <p className="text-sm sm:text-lg p-2 text-gray-700">
                 Established in 2023, we have built a strong reputation for
                 delivering innovative and sustainable solutions tailored to meet
                 the unique needs of our clients (Water Resource Department,
                 Govt. of Maharashtra).
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-                {iconData.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="shadow-md py-6 px-4 rounded-lg flex items-center bg-white"
-                  >
-                    <div className="text-[#00afe9] text-2xl sm:text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-3 sm:p-4 mr-3 transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
-                      {item.icon}
-                    </div>
-                    <div className="text-sm sm:text-md text-gray-700">
-                      {item.text}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </ContentWrapper>
       </motion.div>
-
+      <motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 mx-8">
+          {iconData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="shadow-md py-6 px-4 rounded-lg flex items-center bg-white"
+            >
+              <div className="text-[#00afe9] text-2xl sm:text-3xl border border-[#00afe9] rounded-full flex justify-center items-center p-3 sm:p-4 mr-3 transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500">
+                {item.icon}
+              </div>
+              <div className="text-xs sm:text-lg text-gray-700">
+                {item.text}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
       {/* Our Expertise Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -172,7 +172,7 @@ function About() {
         transition={{ duration: 0.8 }}
         className="mt-14 text-center px-4 mb-20"
       >
-        <h2 className="text-2xl sm:text-4xl font-bold text-blue-600">
+        <h2 className="text-2xl sm:text-4xl font-bold text-blue-800">
           Our Expertise
         </h2>
         <p className="text-md sm:text-lg max-w-3xl mx-auto mt-3 text-gray-700">

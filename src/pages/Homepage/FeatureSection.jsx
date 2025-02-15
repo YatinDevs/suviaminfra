@@ -75,7 +75,7 @@ const FeatureSection = () => {
         <div className="text-center">
           <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
             Why Choose
-            <span className="bg-gradient-to-r m-2 from-blue-500 to-blue-800 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r m-2 from-blue-600 to-blue-900 text-transparent bg-clip-text">
               Suviam Infra ?
             </span>
           </h3>

@@ -45,7 +45,7 @@ const Contact = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl text-blue-600 font-bold text-center mb-6"
+          className="text-3xl text-blue-800 font-bold text-center mb-6"
         >
           Contact Us
         </motion.h1>
@@ -92,26 +92,24 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full bg-blue-400 flex flex-col gap-3 justify-center items-start text-xs md:flex-row md:justify-around md:items-center p-2 py-4 rounded-2xl text-transparent bg-clip-text"
+              className="w-full bg-blue-800 flex flex-col gap-3 justify-center items-start text-xs md:flex-row md:justify-around md:items-center p-2 py-4 rounded-2xl text-transparent bg-clip-text"
             >
               <div className="flex space-x-4">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
+                  className="text-blue-900 text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
                 >
                   <IoCallOutline />
                 </motion.div>
                 <div>
-                  <p className="text-[#274584] text-md md:text-lg">
-                    Call Us On
-                  </p>
+                  <p className="text-blue-900 text-md md:text-lg">Call Us On</p>
                   <p className="text-gray-700">9403455116 | 9403455280</p>
                 </div>
               </div>
               <div className="flex space-x-4">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="text-[#00afe9] text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
+                  className="text-blue-900 text-lg md:text-2xl border border-[#00afe9] rounded-full flex justify-center items-center p-4 cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px] hover:shadow-blue-500 hover:text-blue-500"
                 >
                   <TfiEmail />
                 </motion.div>

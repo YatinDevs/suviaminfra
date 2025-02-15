@@ -15,10 +15,6 @@ function Homepage() {
     <div>
       {/* <Navbar /> */}
       <HeroSection />
-      {/* Dark Overlay */}
-      <div className="relative h-20 shadow-b-2xl">
-        <div className="absolute  inset-0 bg-gradient-to-b from-blue-400 via-blue-600 to-blue-950"></div>
-      </div>{" "}
       <VideoSection />
       <FeatureSection />
       <CoreServices />

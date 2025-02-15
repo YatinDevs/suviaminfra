@@ -59,7 +59,7 @@ function Blog() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedData.map((blog, index) => (
           <Card
-            key={blog?.index}
+            key={index}
             hoverable
             cover={
               <img

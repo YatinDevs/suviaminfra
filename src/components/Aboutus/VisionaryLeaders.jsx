@@ -19,7 +19,7 @@ const VisionaryLeaders = () => {
           className="font-palanquin text-center my-10 text-3xl md:text-4xl font-bold"
         >
           Our
-          <span className="mr-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r m-2 from-blue-600 to-blue-900 text-transparent bg-clip-text">
             {" "}
             Visionary
           </span>
