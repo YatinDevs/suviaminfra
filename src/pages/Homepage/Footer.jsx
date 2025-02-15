@@ -152,8 +152,8 @@ const Footer = () => {
           </div>
         </div>{" "}
         {/* Contact Info */}
-        <div className="flex  flex-row justify-center items-center gap-8 mt-10 text-gray-300 border-t border-gray-600 pt-6">
-          <div className="text-lg font-bold mb-4 text-yellow-500">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-8 md:mt-10 text-gray-300 border-t border-gray-600 pt-6">
+          <div className="text-lg font-bold md:mb-4 text-yellow-500">
             CONNECT WITH US
           </div>
           <div className="flex items-center">

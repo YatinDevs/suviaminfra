@@ -18,8 +18,10 @@ function Whatsapppop() {
                 <FaWhatsapp />
               </span>
               <div className="text-left text-white px-4">
-                <h4 className="text-lg font-semibold">Raise Your Query</h4>
-                <p className="text-sm">
+                <h4 className="text-md md:text-lg font-semibold ">
+                  Raise Your Query
+                </h4>
+                <p className="text-xs md:text-md ">
                   Hi! Simply click below and type your query.
                 </p>
               </div>
@@ -28,7 +30,7 @@ function Whatsapppop() {
               </button>
             </div>
 
-            <div className="bg-white text-center p-4 rounded-b-xl">
+            <div className="bg-white text-center text-xs md:text-md p-4 rounded-b-xl">
               <p className="text-gray-600 mb-2">
                 Our experts will reply to you very soon.
               </p>
@@ -38,7 +40,7 @@ function Whatsapppop() {
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg inline-flex items-center mb-2"
               >
-                <FaWhatsapp className="w-5 h-5 mr-2" />
+                <FaWhatsapp className="w-5 h-5 mr-2 " />
                 Click here to send a message
               </a>
               <br />
