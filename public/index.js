@@ -6,3 +6,10 @@ import Pipe5 from "./assets/pipes/img5.png";
 import Pipe6 from "./assets/pipes/img6.png";
 
 export { Pipe1, Pipe2, Pipe3, Pipe4, Pipe5, Pipe6 };
+
+import gallery1 from "./assets/gallery/gallery1.mp4";
+import gallery2 from "./assets/gallery/gallery2.mp4";
+import gallery3 from "./assets/gallery/gallery3.mp4";
+import gallery4 from "./assets/gallery/gallery4.mp4";
+
+export { gallery1, gallery2, gallery3, gallery4 };

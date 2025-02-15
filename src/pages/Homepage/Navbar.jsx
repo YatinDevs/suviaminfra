@@ -30,14 +30,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <ContentWrapper>
-      <header className="text-white relative">
-        {/* Top Bar - Animated Disappearance on Scroll */}
-        <div
-          className={`bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text flex flex-wrap justify-between items-center px-4 md:px-10 py-2 text-sm transition-transform duration-500 ${
-            hideTopBar ? "-translate-y-full" : "translate-y-0"
-          } fixed top-0 left-0 w-full z-50 flex justify-end`}
-        >
+    <header className="text-white relative">
+      {/* Top Bar - Animated Disappearance on Scroll */}
+      <div
+        className={`bg-gradient-to-r from-blue-700 to-blue-800 text-transparent bg-clip-text flex flex-wrap justify-between items-center px-4 md:px-10 py-2 text-sm transition-transform duration-500 ${
+          hideTopBar ? "-translate-y-full" : "translate-y-0"
+        } fixed top-0 left-0 w-full z-50 flex justify-end`}
+      >
+        <ContentWrapper>
           <div className="flex space-x-4">
             <a href="mailto:mail@startuprr.com" className="hover:underline">
               suviaminfra@gmail.com
@@ -47,15 +47,18 @@ const Navbar = () => {
               9403455116
             </a>
           </div>
-        </div>
-        {/* Main Navbar - Stays Sticky */}
-        <nav
-          className={`fixed top-0 left-0 w-full bg-gradient-to-r from-white via-blue-100 to-blue-200 text-blue-900 text-md shadow-md px-4 md:px-10 py-3 flex justify-between items-center transition-all duration-500 z-40 `}
+        </ContentWrapper>
+      </div>
+      {/* Main Navbar - Stays Sticky */}{" "}
+      <nav className="">
+        {" "}
+        {/* Logo */}
+        <div
           style={{ top: hideTopBar ? "0" : "40px" }}
+          className={`fixed top-0 left-0 w-full bg-gradient-to-r from-white via-blue-100 to-blue-200 text-blue-900 text-md shadow-md px-4 md:px-10 py-3 flex justify-between items-center transition-all duration-500 z-40 `}
         >
-          {/* Logo */}
           <div
-            className="flex items-center space-x-4 cursor-pointer"
+            className="flex items-center space-x-4 cursor-pointer "
             onClick={() => navigate(`/`)}
           >
             <div className="bg-blue-900 p-2 rounded-full">
@@ -72,7 +75,6 @@ const Navbar = () => {
               </span>
             </div>
           </div>
-
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8 text-md font-semibold">
             {[
@@ -93,44 +95,43 @@ const Navbar = () => {
                 {item}
               </button>
             ))}
-          </div>
-
+          </div>{" "}
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-blue-700 px-3 py-2">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-        </nav>
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div
-            className={`fixed z-20 top-0 left-0 w-full  shadow-md rounded-b-xl bg-gradient-to-b from-white via-blue-100 to-blue-200 px-4 py-4 md:hidden space-y-4 transition-all duration-500 `}
-            style={{ marginTop: `${mobileMargin}px` }}
-          >
-            {[
-              "ABOUT US",
-              "PRODUCT",
-              "PROJECTS",
-              "GALLERY",
-              "BLOG",
-              "CONTACT US",
-            ].map((item, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  navigate(`/${item.toLowerCase().replace(" ", "")}`);
-                  toggleMenu();
-                }}
-                className="block w-full text-left text-blue-900 font-semibold p-2 hover:bg-blue-200 rounded transition duration-300"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        )}{" "}
-      </header>{" "}
-    </ContentWrapper>
+        </div>
+      </nav>
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          className={`fixed z-20 top-0 left-0 w-full  shadow-md rounded-b-xl bg-gradient-to-b from-white via-blue-100 to-blue-200 px-4 py-4 md:hidden space-y-4 transition-all duration-500 `}
+          style={{ marginTop: `${mobileMargin}px` }}
+        >
+          {[
+            "ABOUT US",
+            "PRODUCT",
+            "PROJECTS",
+            "GALLERY",
+            "BLOG",
+            "CONTACT US",
+          ].map((item, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                navigate(`/${item.toLowerCase().replace(" ", "")}`);
+                toggleMenu();
+              }}
+              className="block w-full text-left text-blue-900 font-semibold p-2 hover:bg-blue-200 rounded transition duration-300"
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      )}{" "}
+    </header>
   );
 };
 

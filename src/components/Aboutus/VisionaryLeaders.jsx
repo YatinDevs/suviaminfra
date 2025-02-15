@@ -1,46 +1,48 @@
 import React from "react";
+import { leadersData } from "../../constants/About";
+import { star } from "../../../public/assets/icons";
+import ContentWrapper from "../ContentWrapper/ContentWrapper";
 
-const VisionaryLeaders = ({ leadersData }) => {
+const VisionaryLeaders = () => {
   return (
-    <div className="bg-gray-100 rounded-xl py-16 px-4 flex justify-center">
-      <div className="w-full max-w-7xl">
-        {/* Section Title */}
-        <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text mb-12">
-          Visionary Leaders
-        </h1>
-
-        {/* Leaders Grid */}
-        <div className="flex justify-center items-center flex-wrap gap-6 ">
+    <section className="max-container  bg-blue-50 py-24 text-gray-700">
+      <ContentWrapper>
+        <h3 className="font-palanquin text-center my-10 text-3xl md:text-4xl font-bold">
+          Our
+          <span className="mr-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
+            {" "}
+            Visionary
+          </span>
+          Leaders
+        </h3>
+        <div className="flex justify-center items-center flex-wrap gap-10">
           {leadersData.map((leader, index) => (
             <div
               key={index}
-              className="bg-white w-96 h-72 rounded-xl shadow-md p-6 flex flex-col items-center text-center transition-transform transform hover:scale-95 hover:shadow-md"
+              className="flex flex-col  justify-center items-center  "
             >
-              {/* Leader Image */}
               <img
                 alt={leader.name}
                 src={leader.image}
-                className="w-24 h-24 object-cover rounded-full mb-4 border-4 border-blue-500"
+                className=" w-[120px] h-[120px] rounded-full object-cover  "
               />
-
-              {/* Leader Name & Icon */}
-              <div className="flex items-center justify-center mb-2">
-                {leader.icon}
-                <h2 className="text-xl font-semibold ml-2 text-gray-800">
-                  {leader.name}
-                </h2>
+              <h3 className="mt-4 font-palanquin text-xl md:text-2xl text-center font-bold ">
+                {leader.name}
+              </h3>{" "}
+              <h4 className="mt-1 font-palanquin text-md md:text-lg text-center font-bold ">
+                {leader.title}
+              </h4>{" "}
+              <p className="info-text text-center md:text-md mt-2 max-w-sm ">
+                {leader.description}
+              </p>
+              <div className="mt-3 flex justify-center items-center gap-2.5 ">
+                <p className="text-xl font-montserrat text-slate-gray"></p>
               </div>
-
-              {/* Title */}
-              <p className="text-sm text-gray-500 mb-2">{leader.title}</p>
-
-              {/* Description */}
-              <p className="text-md text-gray-700">{leader.description}</p>
             </div>
-          ))}
+          ))}{" "}
         </div>
-      </div>
-    </div>
+      </ContentWrapper>
+    </section>
   );
 };
 

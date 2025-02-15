@@ -17,7 +17,7 @@ const Testimonials = () => {
         experiences woth use.
       </p>
 
-      <div className="mt-24 flex flex-1 justify-evenly items-center gap-14 max-lg:flex-col ">
+      <div className="flex mt-16 justify-center items-center flex-wrap gap-10">
         {reviews.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
