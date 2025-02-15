@@ -6,6 +6,15 @@ import {
   Pipe4,
   Pipe5,
   Pipe6,
+  Pipe7,
+  Pipe8,
+  Pipe9,
+  Pipe10,
+  Pipe11,
+  Pipe12,
+  Pipe13,
+  Pipe14,
+  Pipe15,
   gallery1,
   gallery2,
   gallery3,
@@ -22,7 +31,23 @@ import {
 import Img from "../../components/LazyLoadImage/Img";
 import { motion } from "framer-motion";
 
-const infrastructureImages = [Pipe1, Pipe2, Pipe3, Pipe4, Pipe5, Pipe6];
+const infrastructureImages = [
+  Pipe1,
+  Pipe2,
+  Pipe3,
+  Pipe4,
+  Pipe5,
+  Pipe6,
+  Pipe7,
+  Pipe8,
+  Pipe9,
+  Pipe10,
+  Pipe11,
+  Pipe12,
+  Pipe13,
+  Pipe14,
+  Pipe15,
+];
 const constructionVideos = [gallery1, gallery2, gallery3, gallery4];
 
 const serviceIcons = [
@@ -54,7 +79,7 @@ const PipeGallery = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-center font-bold text-gray-700 text-md md:text-xl uppercase p-1">
+            <h2 className="text-center font-bold text-blue-800 text-md md:text-xl uppercase p-1">
               Infrastructure Projects
             </h2>
             <p className="text-center text-md md:text-lg mx-2 md:mx-5 mb-4">
@@ -100,6 +125,7 @@ const PipeGallery = () => {
                     visible: { opacity: 1, scale: 1 },
                   }}
                   transition={{ duration: 0.6 }}
+                  className="w-48 h-48 flex justify-center items-center overflow-hidden rounded-lg shadow-lg"
                 >
                   <Img src={image} className="rounded-lg shadow-lg" />
                 </motion.div>
@@ -114,7 +140,7 @@ const PipeGallery = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-center font-bold text-gray-700 text-md md:text-xl uppercase p-1">
+            <h2 className="text-center font-bold text-blue-800 text-md md:text-xl uppercase p-1">
               Project Videos
             </h2>
             <p className="text-center text-md md:text-lg mx-2 md:mx-5 mb-4">
