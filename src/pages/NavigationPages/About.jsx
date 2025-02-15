@@ -146,7 +146,7 @@ function About() {
         </ContentWrapper>
       </motion.div>
       <motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 mx-8">
+        <div className="grid grid-cols-1  sm:grid-cols-2 gap-6 mt-1 mx-8">
           {iconData.map((item, index) => (
             <motion.div
               key={index}

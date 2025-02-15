@@ -8,7 +8,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Testimonials = () => {
   return (
-    <section className="max-container bg-blue-50 py-24 text-gray-700 transition-opacity duration-700 ease-in-out opacity-100 hover:opacity-90">
+    <section className="max-container bg-blue-50 py-24 w-full text-gray-700 transition-opacity duration-700 ease-in-out opacity-100 hover:opacity-90">
       <h3 className="font-palanquin text-center text-2xl md:text-4xl font-bold">
         What Our
         <span className=" m-2 bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
@@ -24,12 +24,12 @@ const Testimonials = () => {
         autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
-        className="w-full  max-w-lg mx-auto mb-12 mt-6"
+        className="w-full  max-w-xl mx-auto mb-12 mt-6"
       >
         {reviews.map((review, index) => (
           <SwiperSlide
             key={index}
-            className="p-6 bg-gray-100 rounded-lg text-center"
+            className="w-full bg-gray-100 rounded-lg text-center"
           >
             <ReviewCard {...review} />
           </SwiperSlide>
